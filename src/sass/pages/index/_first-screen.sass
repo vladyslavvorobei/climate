@@ -1,0 +1,89 @@
+.first-screen
+	.swiper-container
+		background-color: $firstScreenSliderBackgroundColor
+	.swiper-slide
+		padding: 170px 0 180px
+		color: $firstScreenFontColor
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: center
+		+r(991)
+			padding: 150px 0
+		+r(767)
+			padding: 120px 0
+		+r(575)
+			padding: 100px 0 80px
+		a
+			color: $firstScreenFontColor
+	.swiper-pagination
+		bottom: 50px
+		+r(575)
+			bottom: 30px
+		&-bullet
+			background-color: transparent
+			opacity: 1
+			width: 7px
+			height: 7px
+			border-radius: 50%
+			border: 1px solid $firstScreenFontColor
+			&-active
+				background-color: $firstScreenFontColor
+	h2
+		margin: 0 0 70px
+		line-height: 1.2em
+		font-weight: 400
+		font-size: 40px
+		strong
+			font-weight: 800
+		+r(1199)
+			font-size: 36px
+		+r(991)
+			font-size: 32px
+			margin: 0 0 50px
+		+r(767)
+			font-size: 28px
+		+r(575)
+			font-size: 24px
+			br
+				display: none
+	h3
+		margin: 0 25px 40px 0
+		display: inline-block
+		font-weight: 800
+		font-size: 30px
+		line-height:  1.3em
+		+r(1199)
+			font-size: 26px
+		+r(991)
+			font-size: 24px
+			margin: 0 25px 30px 0
+		+r(767)
+			font-size: 22px
+			margin-bottom: 15px
+		+r(575)
+			font-size: 18px
+	a
+		display: inline-block
+		border-bottom: 1px dashed $firstScreenFontColor
+		transition: all .3s ease
+		margin-bottom: 30px
+		&:hover
+			border-bottom: 1px dashed transparent
+	ul
+		max-width: 700px
+		li
+			padding-left: 35px
+			line-height: 1.625em
+			position: relative
+			+r(575)
+				padding-left: 20px
+			&::before
+				content: ''
+				width: 6px
+				height: 6px
+				position: absolute
+				left: 0
+				top: 7px
+				border-radius: 50%
+				background-color: $firstScreenFontColor
+

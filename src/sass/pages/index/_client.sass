@@ -1,0 +1,27 @@
+.client
+	padding-bottom: 150px
+	+r(991)
+		padding-bottom: 100px
+	+r(575)
+		padding-bottom: 40px
+	&__list
+		display: grid
+		grid-template-columns: repeat(7, 1fr)
+		grid-gap: 3px
+		+r(1199)
+			grid-template-columns: repeat(6, 1fr)
+		+r(991)
+			grid-template-columns: repeat(5, 1fr)
+		+r(767)
+			grid-template-columns: repeat(3, 1fr)
+		+r(575)
+			grid-template-columns: repeat(2, 1fr)
+		li
+			&:nth-child(-n+3)
+				+r(767)
+					display: none
+		img
+			display: block
+			width: 100%
+			height: auto
+			box-shadow: 0 0 36px 0 rgba(0, 0, 0, 0.36)

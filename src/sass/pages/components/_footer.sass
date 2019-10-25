@@ -1,0 +1,61 @@
+.footer
+	background-color: $footerBackgroundColor
+	&__top-bar
+		display: flex
+		justify-content: space-between
+		align-items: center
+		flex-wrap: wrap
+		padding: 35px 0
+		border-bottom: 1px solid $footerCopyrightFontColor
+		+r(575)
+			flex-direction: column
+
+	&__tel-number
+		margin-left: auto
+		margin-right: 15px
+		color: $footerFontColor
+		+r(575)
+			margin: 0 auto 15px
+	&__social
+		margin-left: 150px
+		display: flex
+		+r(575)
+			margin: 0 0 15px
+		li
+			margin: 0 5px
+			a, img
+				display: block
+			img
+				width: 22px
+				height: 22px
+	&__copyright
+		padding: 25px 0 65px
+		display: flex
+		justify-content: space-between
+		align-items: center
+		flex-wrap: wrap
+		+r(575)
+			flex-direction: column-reverse
+			padding: 25px 0
+		p, a
+			display: block
+			color: $footerCopyrightFontColor
+			font-size: 12px
+			line-height: 1em
+			+ls(50)
+		p
+			margin: 0 0 10px
+		a
+			border-bottom: 1px solid $footerCopyrightFontColor
+			transition: all .3s ease
+			&:hover
+				border-bottom: 1px solid transparent
+		img
+			display: block
+			max-width: 75px
+			height: auto
+			margin-bottom: 10px
+			+r(991)
+				margin: 15px auto 0
+			+r(767)
+				margin: 0 0 10px

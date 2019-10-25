@@ -1,0 +1,61 @@
+.button
+	display: block
+	font-family: $buttonFont
+	font-weight: $buttonFontWeight
+	font-size: $buttonFontSize
+	text-transform: uppercase
+	line-height: 1em
+	color: $buttonFontColor
+	border: 1px solid $buttonBorderColor
+	background-color: $buttonBackgroundColor
+	border-radius: $buttonBorderRadius
+	flex-shrink: 0
+	padding: $buttonPadding
+	+ls($buttonLetterSpacing)
+	position: relative
+	overflow: hidden
+	transition: all .6s ease
+	+r(991)
+		display: none
+	span
+		position: relative
+		z-index: 1
+	&::before
+		content: ''
+		width: 0
+		height: 100%
+		background-color: rgba($buttonBackgroundColorHover , .3)
+		left: -10%
+		top: 0
+		position: absolute
+		transition: all .8s ease
+		transform: skew(-50deg)
+	&::after
+		content: ''
+		width: 0
+		height: 100%
+		background-color: $buttonBackgroundColorHover
+		left: -10%
+		top: 0
+		position: absolute
+		transition: all .4s ease
+		transform: skew(-50deg)
+	&:hover
+		color: $buttonFontColorHover
+		&::before
+			width: 120%
+			right: -10%
+			left: auto
+		&::after
+			width: 120%
+			right: -10%
+			left: auto
+	&--mobile-visible
+		display: none
+		+r(991)
+			display: block
+			margin: 15px auto 40px
+	&--footer
+		+r(991)
+			display: block
+			margin: 10px auto 0

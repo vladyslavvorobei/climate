@@ -1,0 +1,38 @@
+.tel-number
+	display: block
+	position: relative
+	font-size: 18px
+	font-weight: 400
+	color: $telNumberFontColor
+	line-height: 1em
+	padding: 5px 5px 5px 30px
+	transition: all .3s ease
+	+r(991)
+		display: none
+	&::before
+		content: ''
+		width: 17px
+		height: 18px
+		position: absolute
+		left: 0
+		top: calc( 50% - 9px)
+		background: url('../img/phone-call-button.svg') center no-repeat
+		background-size: contain
+		transition: all .3s ease
+	&:hover
+		opacity: .8
+		&::before
+			transform: scale(1.2)
+	&--mobile-visible
+		display: none
+		+r(991)
+			display: block
+			margin:  0 auto
+			text-align: center
+			padding: 5px
+			&::before
+				content: none
+	&--footer
+		+r(991)
+			display: block
+

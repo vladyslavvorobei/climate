@@ -1,0 +1,118 @@
+.manufacturers
+	padding: 130px 0 50px
+	+r(1199)
+		padding: 100px 0 50px
+	+r(767)
+		padding: 20px 0 40px
+	.title
+		padding-bottom: 20px
+	.swiper-container-multirow-column
+		.swiper-wrapper
+			flex-direction: row
+	.swiper-container
+		+r(575)
+			padding-bottom: 40px
+	&__slider
+		background-color: $white
+		border: 20px solid $manufactSliderBorderColor
+		border-top: none
+		position: relative
+		margin-left: 144px
+		+r(1400)
+			margin: 0 70px
+		+r(575)
+			margin: 0
+		&::before
+			content: ''
+			width: calc( 100% + 40px)
+			left: -20px
+			height: 200px
+			position: absolute
+			bottom: 100%
+			background-color: $white
+			border: 20px solid $manufactSliderBorderColor
+			border-bottom: none
+			+r(767)
+				height: 150px
+	.swiper-slide
+		padding-bottom: 1px
+		overflow: hidden
+		&::before, &::after
+			content: ''
+			width: 70%
+			height: 1px
+			left: 15%
+			background-color: $manufactSliderBorderColor
+			position: absolute
+		&::before
+			top: -1px
+		&::after
+			bottom: 1px
+	&__slide
+		display: flex
+		align-items: center
+		justify-content: center
+		position: relative
+		padding-right: 1px
+		&::before, &::after
+			content: ''
+			width: 1px
+			height: 70%
+			top: 15%
+			background-color: $manufactSliderBorderColor
+			position: absolute
+		&::before
+			left: 0
+		&::after
+			right: 0
+		img
+			display: block
+			width: auto
+			height: 100%
+			max-height: 150px
+			padding: 10px
+	.swiper-pagination
+		display: none
+		+r(575)
+			display: block
+			bottom: 5px
+		&-bullet
+			background-color: transparent
+			opacity: 1
+			width: 7px
+			height: 7px
+			border-radius: 50%
+			border: 1px solid $manufactSliderArrowsColor
+			&-active
+				background-color: $manufactSliderArrowsColor
+	.swiper-button-next,
+	.swiper-button-prev
+		width: 56px
+		height: 56px
+		border: 1px solid $manufactSliderArrowsColor
+		border-radius: 50%
+		background-color: $white
+		outline: none
+		display: block
+		+r(575)
+			display: none
+		&:after
+			color: $manufactSliderArrowsColor
+			font-size: 0
+			width: 19px
+			height: 19px
+			background-size: contain
+			position: absolute
+			left:  50%
+			top: 50%
+			transform: translate(-50%, -50%)
+			background-color: #fff
+	.swiper-button-next
+		right: -95px
+		&:after
+			background: url('../img/arrow-next.svg') center no-repeat
+	.swiper-button-prev
+		background-color: transparent
+		left: -95px
+		&:after
+			background: url('../img/arrow-prev.svg') center no-repeat
