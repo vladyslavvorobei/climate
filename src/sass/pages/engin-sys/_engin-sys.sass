@@ -1,0 +1,51 @@
+.engin-sys
+	&__description
+		color: $engsysDescriptionColor
+		font-size: 16px
+		+r(575)
+			font-size: 14px
+	&__grid
+		display: grid
+		grid-template-columns: repeat(3, 1fr)
+		grid-gap: 30px
+		padding: 60px 0 35px
+		+r(1199)
+			grid-template-columns: repeat(2, 1fr)
+		+r(991)
+			padding: 40px 0 35px
+		+r(767)
+			grid-template-columns: 1fr
+			grid-gap: 20px
+			padding: 25px 0
+		a, img
+			display: block
+			width: 100%
+			height: auto
+			position: relative
+			transition: all .5s ease
+		a
+			overflow: hidden
+			background-color: $engsysLinkBackgroundColor
+			&:hover
+				img
+					transform: scale(1.2)
+		img
+			max-height: 212px
+			object-fit: cover
+		h3
+			margin: 0
+			padding-left: 98px
+			position: absolute
+			bottom: 40px
+			left: 0
+			color: $engsysTitleFontColor
+			font-weight: 800
+			font-size: 20px
+			&::before
+				content: ''
+				width: 80px
+				height: 10px
+				position: absolute
+				left: 1px
+				top: 5px
+				background-color: $engsysTitleBeforColor
