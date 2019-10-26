@@ -1,0 +1,65 @@
+.calculator
+	padding: 40px 0 0
+	background-position: center top
+	background-image: url('../img/price-page-calculator.jpg')
+	overflow: hidden
+	+r(991)
+		padding: 0
+		background-image: none
+		.title
+			padding: 30px 0
+	&__block
+		padding: 220px 0 90px 200px
+		text-align: center
+		color: $calculatorFontColor
+		+r(991)
+			padding: 40px 0 50px
+			position: relative
+			&::before
+				content: ''
+				width: 150%
+				height: 100%
+				left: 0
+				top: 0
+				position: absolute
+				background-image: url('../img/price-page-calculator--small.jpg')
+		+r(767)
+			padding: 40px 0
+		img
+			position: relative
+			display: block
+			width: 54px
+			height: auto
+			margin: 0 auto 50px
+			+r(575)
+				margin-bottom: 30px
+		h3
+			position: relative
+			font-weight: 800
+			font-size: 30px
+			text-transform: uppercase
+			margin: 0 auto 30px
+			+r(575)
+				font-size: 24px
+		h4
+			position: relative
+			font-weight: 700
+			font-size: 20px
+			text-transform: uppercase
+			line-height: 1.2em
+			margin: 0 auto 40px
+			+r(991)
+				br
+					display: none
+			+r(575)
+				font-size: 18px
+		p
+			position: relative
+			font-size: 20px
+			font-weight: 400
+			margin: 0 auto 40px
+			+r(575)
+				font-size: 16px
+		span
+			position: relative
+			font-size: 12px
