@@ -1,5 +1,5 @@
 ProjectTitle: techoap
 
 PageList:
-- file: index.html
+- file: index.sass
   ready: 50
