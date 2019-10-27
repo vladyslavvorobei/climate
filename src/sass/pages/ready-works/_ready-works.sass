@@ -1,0 +1,42 @@
+.ready-works
+	&__inner-wrapper
+		display: grid
+		grid-template-columns: repeat(2, 1fr)
+		grid-gap: 30px
+		padding: 0 0 80px
+		+r(991)
+			grid-template-columns: 1fr
+			padding: 0 0 60px
+		+r(575)
+			grid-gap: 20px
+			padding: 0 0 40px
+	&__info
+		color: $elephant
+		h3
+			font-size: 20px
+		p
+			margin: 0 0 5px
+			&:last-of-type
+				margin-bottom: 0
+.img-slider
+	box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.2)
+	border-top: 6px solid $pictonBlue
+	&__main
+		img
+			display: block
+			width: 100%
+			height: 100%
+	&__list
+		display: grid
+		grid-template-columns: repeat(4, 1fr)
+		grid-gap: 4px 3px
+		padding: 5px
+		li
+			img
+				display: block
+				width: 100%
+				height: 100%
+				object-fit: cover
+				cursor: pointer
+				&:hover
+
