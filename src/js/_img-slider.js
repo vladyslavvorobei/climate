@@ -7,8 +7,7 @@ const $imgMain = $('.img-slider__main');
 
 function getURL() {
   const srcImg = $imgList.find($img[0]).attr('src');
-  $imgMain.find('img').attr('src', srcImg);
-  // $imgMain.prepend($('<img>',{src: srcImg}));
+  $imgMain.prepend($('<img>',{src: srcImg}));
 }
 
 function setURL() {
