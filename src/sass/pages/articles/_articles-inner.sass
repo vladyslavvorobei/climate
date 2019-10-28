@@ -1,0 +1,63 @@
+.articles-inner
+	&__content
+		display: flow-root
+		color: $elephant
+		padding-bottom: 75px
+		+r(991)
+			padding-bottom: 55px
+		+r(575)
+			padding-bottom: 40px
+		p
+			margin: 15px 0 30px
+			font-size: 16px
+			line-height: 1.7em
+			&:last-of-type
+				margin-bottom: 0
+			+r(991)
+				margin: 0 0 15px
+			+r(575)
+				font-size: 14px
+	&__img
+		float: left
+		margin-right: 90px
+		margin-bottom: 15px
+		padding: 40px 0
+		display: block
+		position: relative
+		+r(991)
+			float: none
+		+r(767)
+			margin-right: 60px
+		+r(575)
+			margin-right: 40px
+			padding: 25px 0
+		&::before
+			content: ''
+			width: 103%
+			height: 100%
+			position: absolute
+			border: 10px solid $pictonBlue
+			top: 0
+			left: 27px
+			z-index: -1
+			+r(575)
+				width: 100%
+		&:nth-of-type(even)
+			float: right
+			margin-right: 0
+			margin-left: 90px
+			padding: 40px 0
+			+r(991)
+				float: none
+			+r(767)
+				margin-left: 60px
+			+r(575)
+				margin-left: 40px
+				padding: 25px 0
+			&::before
+				left: auto
+				right: 27px
+		img
+			display: block
+			width: 100%
+			height: auto
