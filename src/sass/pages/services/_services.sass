@@ -1,0 +1,66 @@
+.services
+	background: right top no-repeat
+	background-size: contain
+	&__description
+		color: $engsysDescriptionColor
+		font-size: 16px
+		margin-left: 100px
+		+r(991)
+			margin-left: 0
+		+r(575)
+			font-size: 14px
+		p
+			margin: 0 0 60px
+			+r(575)
+				margin: 0 0 20px
+			&:last-of-type
+				margin: 0 0 40px
+				+r(575)
+					margin:  0 0 20px
+	&__grid
+		display: grid
+		grid-template-columns: repeat(2, 1fr)
+		grid-gap: 50px 30px
+		padding: 0 0 65px
+		+r(991)
+			grid-template-columns: 1fr
+			padding: 0 0 55px
+		+r(767)
+			grid-gap: 20px
+			padding: 0 0 30px
+		a, img
+			display: block
+			width: 100%
+			height: auto
+			position: relative
+			transition: all .5s ease
+		a
+			overflow: hidden
+			&:hover
+				img
+					transform: scale(1.2)
+		img
+			max-height: 315px
+			object-fit: cover
+			margin-left: 20px
+			+r(767)
+				margin-left: 0
+		h3
+			margin: 0
+			padding: 8px 15px 8px  40px
+			position: absolute
+			bottom: 40px
+			left: 0
+			color: $engsysTitleFontColor
+			font-weight: 800
+			font-size: 20px
+			background-color: $pictonBlue
+			line-height: 1.2em
+			+r(767)
+				font-size: 18px
+				bottom: 30px
+				padding-left: 30px
+			+r(575)
+				font-size: 16px
+				bottom: 20px
+				padding-left: 20px
