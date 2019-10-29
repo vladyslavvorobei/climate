@@ -1,45 +1,57 @@
-.contacts
+.modal
+	margin-top: 5%
 	position: relative
-	overflow: hidden
+	outline: none
+	background: url('../img/contacts-form-bg.jpg') center no-repeat
 	background-size: cover
-	background-position: center
-	background-repeat: no-repeat
-	&__form
-		margin-left: 200px
-		padding: 55px 140px 50px
-		position: relative
-		+r(1199)
-			margin-left: 0
-			background: url('../img/contacts-form-bg.jpg') center no-repeat
-			background-size: cover
-		+r(991)
-			padding: 55px 60px 50px
-		+r(575)
-			padding: 40px 15px
-		&::before
+	padding: 75px 60px 50px
+	+r(575)
+		padding: 60px 15px 40px
+	&_close
+		position: absolute
+		width: 25px
+		height: 25px
+		background-color: transparent
+		right: 20px
+		top: 20px
+		cursor: pointer
+		&:hover
+			.modal__close
+				&::before, &::after
+					background-color: red
+	&__close
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		width: 25px
+		height: 4px
+		background-color: transparent
+		&::before, &::after
 			content: ''
-			width: 150%
-			height: 100%
-			background: url('../img/contacts-form-bg.jpg') center no-repeat
-			background-size: cover
+			width: 25px
+			height: 4px
+			background-color: $pictonBlue
 			position: absolute
-			left: 0
-			top: 0
-			+r(1199)
-				content: none
+			transition: all .3s ease
+		&::before
+			transform: rotate(45deg)
+		&::after
+			transform: rotate(-45deg)
 	&__label
 		position: relative
-		display: flex
-		justify-content: space-between
-		align-items: center
-		margin-bottom: 10px
+		margin-bottom: 15px
+		&:last-of-type
+			margin-bottom: 0
+		span
+			text-align: center
 		+r(991)
 			flex-direction: column
 		input[type="text"],
 		input[type="tel"],
 		input[type="email"]
 			display: block
-			width: 317px
+			width: 100%
 			background-color: transparent
 			border: 1px solid $white
 			font-size: 18px
@@ -92,8 +104,6 @@
 			font-size: 11px
 			color: $white
 			line-height: 1.4em
-		&-wrapper
-			position: relative
 	&__agree
 		position: relative
 		input
@@ -102,8 +112,10 @@
 			width: 1px
 			position: absolute
 			margin: 0
-
-		&-label
+			&:checked + label
+				&::after
+					opacity: 1
+		label
 			position: relative
 			padding-left:  25px
 			font-size: 11px
@@ -139,6 +151,17 @@
 				transition: all .3s ease
 				&:hover
 					border-bottom:  1px solid $pictonBlue
-			&--checked
-				&::after
-					opacity: 1
+label
+	position: relative
+	&.error
+		position: absolute
+		width: 100%
+		display: block
+		top: -10px
+		color: $white
+		background-color: $stratos
+		border-radius: 10px
+		left: 0
+		text-align: center
+	&#agree-error
+		top: -20px

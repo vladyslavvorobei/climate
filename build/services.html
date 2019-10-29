@@ -20,7 +20,7 @@
               <img src="img/logo.png" alt="">
             </a>
             <a href="tel:+74956416444" class="header__tel-number tel-number"> 7 (495) 641-64-44 </a>
-            <button class="button">
+            <button class="button modal_open">
               <span> заказать звонок </span>
             </button>
             <button class="burger-btn">
@@ -97,7 +97,7 @@
             </ul>
           </nav>
           <a href="tel:+74956416444" class="tel-number tel-number--mobile-visible"> 7 (495) 641-64-44 </a>
-          <button class="button button--mobile-visible">
+          <button class="button button--mobile-visible modal_open">
             <span> заказать звонок </span>
           </button>
         </div>
@@ -158,7 +158,7 @@
             </li>
           </ul>
           <a href="tel:+74956416444" class="footer__tel-number tel-number tel-number--footer"> 7 (495) 641-64-44 </a>
-          <button class="button button--footer">
+          <button class="button button--footer modal_open">
             <span> заказать звонок </span>
           </button>
         </div>
@@ -172,6 +172,23 @@
         </div>
       </div>
     </footer>
+    <div class="modal" id="modal">
+      <form class="modal__form form">
+        <div class="modal_close">
+          <div class="modal__close">
+          </div>
+        </div>
+        <div class="modal__label">
+          <input type="text" placeholder="ФИО*" name="name" required>
+        </div>
+        <div class="modal__label">
+          <input type="tel" placeholder="Телефон*" name="phone" required>
+        </div>
+        <button class="btn btn--modal">
+          <span> Отправить </span>
+        </button>
+      </form>
+    </div>
     <!-- END content -->
     <!-- BEGIN scripts -->
     <script src="js/app.js"></script>

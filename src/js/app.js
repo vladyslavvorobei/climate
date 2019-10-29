@@ -4,12 +4,15 @@ import './_addClassDropList';
 import './_burgerMenu';
 import './_img-slider';
 import './_addImgWrapper';
-
+import './_agreeChecked';
 
 import '../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min'
 import '../../node_modules/jquery-popup-overlay/jquery.popupoverlay';
 import '../../node_modules/jquery-mask-plugin/dist/jquery.mask.min';
 import '../../node_modules/jquery-validation/dist/jquery.validate.min';
+
+// CHECKBOX
+
 
 // MODAL
 $('.modal').popup({
@@ -48,7 +51,8 @@ $('.form').each(function (index, el) {
   $(`.form-${index}`).validate({
     rules: {
       name: 'required',
-      message: 'required',
+      email: 'required',
+      agree: 'required',
       phone: {
         required: true,
         phoneno: true
@@ -57,7 +61,8 @@ $('.form').each(function (index, el) {
     messages: {
       name: 'Введите Ваше имя',
       phone: 'Введите Ваш телефон',
-      message: 'Оставьте Ваше сообщение'
+      email: 'Введите Ваш email',
+      agree: 'Нужно Ваше согласие'
     },
     submitHandler(form) {
       const t = $(`.form-${index}`).serialize();
