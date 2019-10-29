@@ -1,0 +1,99 @@
+.worker
+	position: relative
+	background-position: center
+	background-repeat: no-repeat
+	background-size: cover
+	&__description
+		padding-left: 40px
+		font-size: 16px
+		color: $elephant
+		position: relative
+		margin: -30px 0 50px
+		+r(575)
+			margin: -20px 0 30px
+			padding: 0
+	&__slider
+		position: relative
+		.swiper-slide
+			box-sizing: border-box
+			img
+				display: block
+				width: 100%
+				height: auto
+				max-height: 342px
+				object-fit: contain
+			h3
+				width: 100%
+				padding: 30px 15px  0
+				text-align: center
+				box-sizing: border-box
+				margin: 0 0 30px
+				font-size: 16px
+				color: $elephant
+				text-transform: uppercase
+				position: relative
+				&::before
+					content: ''
+					width: 144px
+					height: 4px
+					background-color: $pictonBlue
+					position: absolute
+					top: 0
+					left: 38%
+			p
+				display: block
+				padding: 0 15px
+				margin: 0
+				text-align: center
+				font-size: 14px
+				color: $manatee
+	.swiper-container
+		padding-bottom: 55px
+	.swiper-pagination
+		bottom: 25px
+		&-bullet
+			background-color: transparent
+			opacity: 1
+			width: 7px
+			height: 7px
+			border-radius: 50%
+			border: 1px solid $manufactSliderArrowsColor
+			&-active
+				background-color: $manufactSliderArrowsColor
+	.swiper-button-next,
+	.swiper-button-prev
+		width: 56px
+		height: 56px
+		border: 1px solid $manufactSliderArrowsColor
+		border-radius: 50%
+		background-color: $white
+		outline: none
+		display: block
+		top: 38%
+		+r(767)
+			display: none
+		&:after
+			color: $manufactSliderArrowsColor
+			font-size: 0
+			width: 19px
+			height: 19px
+			background-size: contain
+			position: absolute
+			left:  50%
+			top: 50%
+			transform: translate(-50%, -50%)
+			background-color: #fff
+	.swiper-button-next
+		background-color: transparent
+		right: -75px
+		+r(991)
+			right: -45px
+		&:after
+			background: url('../img/arrow-next.svg') center no-repeat
+	.swiper-button-prev
+		background-color: transparent
+		left: -75px
+		+r(991)
+			left: -45px
+		&:after
+			background: url('../img/arrow-prev.svg') center no-repeat

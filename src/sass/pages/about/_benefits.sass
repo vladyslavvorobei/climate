@@ -1,0 +1,90 @@
+.benefits
+	&__wrapper
+		.benefits__inner-wrapper
+			&:nth-child(1)
+				.benefits__block
+					padding: 0 360px 15px 0
+					+r(1199)
+						padding-right: 0
+			&:nth-child(3n + 4)
+				.benefits__block
+					padding-right: 360px
+					+r(1199)
+						padding-right: 0
+
+			&:nth-child(3n+2)
+				.benefits__block
+					padding-left: 400px
+					+r(1199)
+						padding-left: 0
+	&__inner-wrapper
+		position: relative
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: center
+		&:nth-of-type(1), &:nth-of-type(3n + 4)
+			+r(1199)
+				background-position: left
+		&:nth-of-type(3n+2)
+			+r(1199)
+				background-position: right
+	&__block
+		padding: 60px 0
+		background: center no-repeat
+		background-size: cover
+		+r(991)
+			padding: 35px 0
+	&__item
+		display: flex
+		align-items: flex-start
+	&__img
+		flex-shrink: 0
+		width: 70px
+		margin-right: 15px
+		+r(575)
+			width: 55px
+			margin-right: 10px
+		img
+			display: block
+			margin: 0 auto
+			+r(575)
+				width: auto
+				height: auto
+				max-width: 100%
+				margin: 3px auto 0
+
+	&__text
+		margin-bottom: 20px
+		color: $elephant
+		h3
+			margin: 20px 0
+			font-size: 16px
+			font-weight: 800
+			+r(575)
+				margin: 0 0 20px
+		h4
+			font-size: 14px
+		p
+			margin: 0
+			& + ul
+				margin-top: 20px
+		ul
+			li
+				padding-left: 29px
+				position: relative
+				line-height: 1.5em
+				display: block
+				margin-bottom: 5px
+				&:last-of-type
+					margin-bottom: 0
+				&::before
+					content: ''
+					width: 8px
+					height: 8px
+					position: absolute
+					left: 4px
+					top: 6px
+					background-color: $pictonBlue
+					border-radius: 50%
+
+

@@ -1,0 +1,60 @@
+.about
+	position: relative
+	background-position: center
+	background-repeat: no-repeat
+	background-size: cover
+	overflow: hidden
+	padding-bottom: 80px
+	+r(575)
+		padding-bottom: 40px
+	&::before
+		content: ''
+		right: 0
+		top: 0
+		width: 60%
+		height: 640px
+		position: absolute
+		background: url('../img/about-bg.png') top right no-repeat
+		background-size: contain
+		+r(1199)
+			height: 500px
+		+r(991)
+			height: 340px
+		+r(767)
+			width: 50%
+			height: 260px
+		+r(575)
+			width: 35%
+			height: 120px
+	&__content
+		max-width: 750px
+		color: $elephant
+		+r(1199)
+			max-width: 710px
+		p
+			font-size: 16px
+			margin: 0 0 30px
+			line-height: 1.500em
+			+r(575)
+				font-size: 14px
+				margin-bottom: 20px
+			&:first-child
+				max-width: 560px
+				+r(991)
+					max-width: 400px
+				+r(575)
+					max-width: none
+		blockquote
+			text-align: right
+			margin: 0 0 0 70px
+			font-weight: 700
+			+r(767)
+				margin-left: 40px
+			+r(575)
+				margin-left: 0
+				text-align: left
+			span
+				display: block
+				line-height: 1.714em
+			br
+				display: none

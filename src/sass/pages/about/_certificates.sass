@@ -1,0 +1,68 @@
+.certificates
+	&__slider
+		position: relative
+		margin: 0 55px
+	.swiper-slide
+		box-sizing: border-box
+		display: flex
+		align-items: center
+		justify-content: center
+		height: 100%
+		a
+			display: block
+			height: 100%
+		img
+			display: block
+			width: 100%
+			height: auto
+			max-height: 380px
+			object-fit: contain
+
+	.swiper-container
+		padding-bottom: 55px
+	.swiper-wrapper
+		align-items: center
+	.swiper-pagination
+		bottom: 25px
+		&-bullet
+			background-color: transparent
+			opacity: 1
+			width: 7px
+			height: 7px
+			border-radius: 50%
+			border: 1px solid $manufactSliderArrowsColor
+			&-active
+				background-color: $manufactSliderArrowsColor
+	.swiper-button-next,
+	.swiper-button-prev
+		width: 56px
+		height: 56px
+		border: 1px solid $manufactSliderArrowsColor
+		border-radius: 50%
+		background-color: $white
+		outline: none
+		display: block
+		top: 38%
+		+r(767)
+			display: none
+		&:after
+			color: $manufactSliderArrowsColor
+			font-size: 0
+			width: 19px
+			height: 19px
+			background-size: contain
+			position: absolute
+			left:  50%
+			top: 50%
+			transform: translate(-50%, -50%)
+			background-color: #fff
+	.swiper-button-next
+		background-color: transparent
+		right: -75px
+		&:after
+			background: url('../img/arrow-next.svg') center no-repeat
+	.swiper-button-prev
+		background-color: transparent
+		left: -75px
+		&:after
+			background: url('../img/arrow-prev.svg') center no-repeat
