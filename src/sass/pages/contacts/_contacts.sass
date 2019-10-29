@@ -1,0 +1,141 @@
+.contacts
+	position: relative
+	overflow: hidden
+	background-size: cover
+	background-position: center
+	background-repeat: no-repeat
+	&__form
+		margin-left: 200px
+		padding: 55px 140px 50px
+		position: relative
+		+r(1199)
+			margin-left: 0
+			background: url('../img/contacts-form-bg.jpg') center no-repeat
+			background-size: cover
+		+r(991)
+			padding: 55px 60px 50px
+		+r(575)
+			padding: 40px 15px
+		&::before
+			content: ''
+			width: 150%
+			height: 100%
+			background: url('../img/contacts-form-bg.jpg') center no-repeat
+			background-size: cover
+			position: absolute
+			left: 0
+			top: 0
+			+r(1199)
+				content: none
+	&__label
+		position: relative
+		display: flex
+		justify-content: space-between
+		align-items: center
+		margin-bottom: 10px
+		+r(991)
+			flex-direction: column
+		input[type="text"],
+		input[type="tel"],
+		input[type="email"]
+			display: block
+			width: 317px
+			background-color: transparent
+			border: 1px solid $white
+			font-size: 18px
+			color: $white
+			line-height: 1.25em
+			border-radius: 30px
+			padding: 18px 30px
+			outline: none
+			box-sizing: border-box
+			box-shadow: none
+			font-family: $bodyFont
+			font-weight: 400
+			+r(1199)
+				width: 300px
+			+r(991)
+				width: 100%
+				margin-bottom: 10px
+				&:last-of-type
+					margin-bottom: 0
+			+r(767)
+				font-size: 16px
+				padding: 14px 30px
+			&::placeholder
+				color: $white
+		textarea
+			display: block
+			width: 100%
+			background-color: transparent
+			border: 1px solid $white
+			font-size: 18px
+			color: $white
+			line-height: 1.25em
+			border-radius: 30px
+			padding: 18px 30px
+			outline: none
+			box-sizing: border-box
+			box-shadow: none
+			font-family: $bodyFont
+			font-weight: 400
+			margin: 5px 0 10px
+			resize: none
+			&::placeholder
+				color: $white
+			+r(767)
+				font-size: 16px
+				padding: 14px 30px
+		span
+			display: block
+			position: relative
+			font-size: 11px
+			color: $white
+			line-height: 1.4em
+	&__agree
+		position: relative
+		input
+			opacity: 0
+			height: 1px
+			width: 1px
+			position: absolute
+			margin: 0
+			&:checked + label
+				&::after
+					opacity: 1
+		label
+			position: relative
+			padding-left:  25px
+			font-size: 11px
+			color: $white
+			line-height: 1.4em
+			display: block
+			width: 100%
+			&::before
+				content: ''
+				width: 13px
+				height: 13px
+				background-color: $white
+				position: absolute
+				border-radius: 2px
+				left: 2px
+				top: 1px
+			&::after
+				content: ''
+				width: 8px
+				height: 6px
+				border-bottom: 2px solid $pictonBlue
+				border-left: 2px solid $pictonBlue
+				position: absolute
+				left: 4.5px
+				top: 3px
+				transform: rotate(-45deg)
+				opacity: 0
+				transition: all .3s ease
+			a
+				color: $pictonBlue
+				line-height: .9em
+				border-bottom: 1px solid transparent
+				transition: all .3s ease
+				&:hover
+					border-bottom:  1px solid $pictonBlue

@@ -1,0 +1,41 @@
+<section class="contacts" style="background-image: url('img/contacts-bg.jpg')">
+  <div class="container">
+    <div class="title title--no-number">
+      <h2>
+        контакты
+        <strong>
+          Обратная связь
+        </strong>
+      </h2>
+    </div>
+    <form class="contacts__form">
+      <div class="contacts__label">
+        <input type="text" placeholder="ФИО*" name="name" required>
+
+        <input type="tel" placeholder="Телефон*" name="phone" required>
+      </div>
+      <div class="contacts__label">
+        <input type="text" placeholder="Организация" name="organization">
+
+        <input type="email" placeholder="E-mail*" name="email" required>
+      </div>
+      <div class="contacts__label">
+        <textarea name="message" rows="4" placeholder="Ваше сообщение"></textarea>
+      </div>
+      <div class="contacts__label">
+        <div class="contacts__agree">
+          <input type="checkbox" id="agree" name="agree" required>
+          <label for="agree">Согласен с <a href="#">политикой конфиденциальности</a></label>
+        </div>
+        <span>
+          * Поля, обязательные для заполнения
+        </span>
+      </div>
+      <button class="btn btn--form">
+        <span>
+          Отправить
+        </span>
+      </button>
+    </form>
+  </div>
+</section>

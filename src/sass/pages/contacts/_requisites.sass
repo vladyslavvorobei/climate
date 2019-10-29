@@ -1,0 +1,93 @@
+.requisites
+	position: relative
+	overflow: hidden
+	&__inner-wrapper
+		margin-bottom: 170px
+		+r(991)
+			margin-bottom: 100px
+		+r(575)
+			margin-bottom: 50px
+	&__block
+		margin-left: 70px
+		background-color: $bodyBackgroundColor
+		max-width: 605px
+		position: relative
+		padding-bottom: 20px
+		+r(1199)
+			margin-left: 0
+		&::before
+			content: ''
+			width: 150%
+			height: 135%
+			position: absolute
+			left: 0
+			top: 0
+			border: 20px solid $pictonBlue
+			z-index: -1
+			+r(991)
+				width: 120%
+				height: 130%
+			+r(767)
+				width: 110%
+				height: 125%
+			+r(575)
+				content: none
+		p
+			margin: 0
+			line-height: 1.500em
+			font-size: 16px
+			color: $elephant
+			+r(575)
+				font-size: 14px
+		a
+			display: inline-block
+			border-bottom: 1px solid transparent
+			transition: all .3s ease
+			color: $elephant
+			&:hover
+				border-bottom: 1px solid $pictonBlue
+	&__logo
+		position: absolute
+		left: 51%
+		bottom: -80px
+		+r(991)
+			position: relative
+			bottom: -10px
+			right: 0
+		+r(767)
+			bottom: 0
+			left: 40px
+		+r(575)
+			left: 0
+		a
+			border-bottom: none
+			&:hover
+				border-bottom: none
+		img
+			display: block
+			width: 100%
+			max-width: 338px
+			height: auto
+			max-height: 61px
+			object-fit: contain
+			+r(575)
+				margin: 0 auto
+
+
+#map
+	width: 100%
+	height: 500px
+	position: relative
+	+r(991)
+		height: 400px
+	+r(575)
+		height: 300px
+	&::before
+		content: ''
+		width: 50%
+		height: 6px
+		top: 0
+		left: 0
+		background-color: $pictonBlue
+		position: absolute
+		z-index: 100
