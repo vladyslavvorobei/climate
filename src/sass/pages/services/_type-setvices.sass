@@ -1,0 +1,59 @@
+.type-services
+	overflow: hidden
+	position: relative
+	padding-bottom: 50px
+	background-position: center
+	background-size: cover
+	background-repeat: no-repeat
+	+r(575)
+		padding-bottom: 40px
+	&__block
+		max-width: 750px
+		position: relative
+		padding: 25px 25px 25px 70px
+		&:before
+			content: ''
+			width: 150%
+			height: 100%
+			background: url('../img/contacts-form-bg.jpg') $elephant center no-repeat
+			background-size: cover
+			position: absolute
+			right: 0
+			top: 0
+		&--design
+			&::before
+				background:
+		&--mounting
+			&::before
+				background:
+		&--guarantee
+			&::before
+				background:
+		ul
+			position: relative
+			display: flex
+			flex-direction: column
+			justify-content: center
+			min-height: 190px
+			box-sizing: border-box
+			li
+				display: block
+				padding-left: 35px
+				position: relative
+				margin-bottom: 5px
+				&::before
+					content: ''
+					width: 4px
+					height: 4px
+					position: absolute
+					border-radius: 50%
+					left: 0
+					top: 8px
+					background-color: $white
+				a
+					display: inline-block
+					color: $white
+					border-bottom: 1px solid $white
+					transition: all .3s ease
+					&:hover
+						border-bottom: 1px solid transparent
