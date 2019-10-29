@@ -1,5 +1,6 @@
 .modal
-	margin-top: 5%
+	margin: 5% 0
+	max-width: 700px
 	position: relative
 	outline: none
 	background: url('../img/contacts-form-bg.jpg') center no-repeat
@@ -151,6 +152,26 @@
 				transition: all .3s ease
 				&:hover
 					border-bottom:  1px solid $pictonBlue
+	h3
+		font-family: $BebasNeue
+		font-size: 50px
+		text-transform: uppercase
+		color: $white
+		margin: 0 0 30px
+		line-height: 1em
+		+r(575)
+			font-size: 24px
+			margin-bottom: 15px
+	h4
+		font-family: $bodyFont
+		font-size: 16px
+		color: $white
+		margin: 0
+		line-height: 1em
+		+r(575)
+			font-size: 14px
+	p
+		color: $white
 label
 	position: relative
 	&.error

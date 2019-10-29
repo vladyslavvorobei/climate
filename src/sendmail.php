@@ -1,6 +1,6 @@
 <?php
 	$SITE_TITLE = 'StandardClimate';
-	$SITE_DESCR = '';
+	$SITE_DESCR = 'Письмо с сайта СтандартКлимат';
   $to = 'vorobeivladyslav@gmail.com';
 
 	if ( isset($_POST) ) {
@@ -9,7 +9,7 @@
 		$email = isset($_POST['email']) ? htmlspecialchars(trim($_POST['email'])) : '';
 		$organization = isset($_POST['organization']) ? htmlspecialchars(trim($_POST['organization'])) : '';
 		$msg = isset($_POST['message']) ? htmlspecialchars(trim($_POST['message'])) : '';
-    $subject = isset($_POST['subject']) ? htmlspecialchars(trim($_POST['subject'])) : '';
+    $subject = "Письмо с сайта СтандартКлимат";
 
 		$headers = "From: $SITE_TITLE \r\n";
 		$headers .= "Content-Type: text/html; charset=utf-8\r\n";
